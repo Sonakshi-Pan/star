@@ -46,18 +46,18 @@ export  default class DetailScreen extends React.Component
                         >
                      <View>
                         
-                        <Text>
+                        <Text style={styles.cardItem}>
                             {`Distance from us :${details.distance}`}
                         </Text>
-                        <Text>
+                        <Text style={styles.cardItem}>
                             {`gravity :${details.gravity}`}
                         </Text>
                         
                         
-                        <Text>
+                        <Text style={styles.cardItem}>
                             {`star mass:${details.mass}`}
                         </Text>
-                        <Text>
+                        <Text style={styles.cardItem}>
                             {`star radius':${details.radius}`}
                         </Text>
                        
@@ -86,15 +86,9 @@ export  default class DetailScreen extends React.Component
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: 'center',
-      paddingTop: Constants.statusBarHeight,
-      backgroundColor: '#ecf0f1',
-      padding: 8,
+      
     },
-    paragraph: {
-      margin: 24,
-      fontSize: 18,
-      fontWeight: 'bold',
-      textAlign: 'center',
+    cardItem:{
+        marginBottom:10
     },
   });
