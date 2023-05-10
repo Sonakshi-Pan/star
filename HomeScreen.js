@@ -52,18 +52,18 @@ render()
     const{listData} = this.state;
     if(listData.length==0){
         return(
-            <View>
-                <Text>loading</Text>  
+            <View style={styles.emptyContainer}>
+                <Text style={styles.headerText}>loading</Text>  
             </View>
         );
     }
     return(
-        <View>
+        <View style={styles.container}>
             <SafeAreaView/>
             <View style={styles.upperContainer}>
-                <Text>PlanetsWorld</Text>
+                <Text style={styles.headerText}>Stars World</Text>
             </View>
-            <View>
+            <View style={styles.lowercontainer}>
                 <FlatList
                     keyExtractor={this.keyExtractor}
                     data={this.state.listDate}
@@ -74,6 +74,41 @@ render()
     )
  }
 }
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        backgroundColor:"#edc988"
+    },
+    upperContainer:{
+        flex:0.1,
+        justifyContent:"center",
+        alignItems:"center"
+    },
+    headerText:{
+        fontSize:30,
+        fontWeight:"bold",
+        color:"#132743"
+    },
+    lowercontainer:{
+        flex:0.9
+    },
+    emptyContainerText:{
+        fontSize:20
+    },
+    emptyContainer:{
+        flex:1,
+        justifyContent:"center",
+        alignItems:"center"
+    },
+    title:{
+        fontSize:18,
+        fontWeight:"bold",
+        color:"#d7385e"
+    },
+    listContainer:{
+        backgroundColor:"#eeecda"
+    }
+});
 
 
 
